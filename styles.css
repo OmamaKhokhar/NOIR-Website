@@ -1,0 +1,353 @@
+/* ================== */
+/* Root Variables     */
+/* ================== */
+:root {
+    --secondary-color: #131313;
+    --primary-light-color: #292929;
+    --primary-color: #000000;
+    --accent-color: #686868;
+}
+
+/* ================== */
+/* Reset & Global Styles */
+/* ================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #fafafa;
+}
+
+/* ================== */
+/* Responsive Container */
+/* ================== */
+.container {
+    width: min(85%, 1200px);
+    margin: 0 auto;
+}
+
+/* ================== */
+/* Typography */
+/* ================== */
+.brand-name {
+    cursor: pointer;
+    font-weight: 100;
+    font-size: clamp(1.5rem, 4vw, 2.2rem);
+    letter-spacing: -2px;
+    color: var(--primary-color);
+}
+
+/* ================== */
+/* Header Section */
+/* ================== */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 24px auto;
+}
+
+/* Navigation Links */
+.header-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    color: var(--accent-color);
+    font-size: clamp(14px, 2vw, 16px);
+    font-weight: 600;
+}
+
+/* Active Link */
+.active {
+    color: var(--primary-color);
+}
+
+
+/* ================== */
+/* Contact Button */
+/* ================== */
+.header-button .contact-button {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    font-size: clamp(12px, 1.8vw, 16px);
+    padding: clamp(8px, 1.5vw, 12px) clamp(10px, 2vw, 14px);
+    background-color: transparent;
+    border: 2px solid var(--primary-light-color);
+    border-radius: 20px;
+    color: var(--primary-light-color);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Icon inside the button */
+.contact-icon {
+    width: 0;
+    opacity: 0;
+    transform: translateX(7px);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover Effect on contact button */
+.contact-button:hover {
+    background-color: var(--primary-light-color);
+    color: #fafafa;
+    gap: 8px;
+}
+
+.contact-button:hover .contact-icon {
+    opacity: 1;
+    transform: translateX(0);
+    width: 24px;
+}
+
+
+/* ================== */
+/* Mobile Menu Icon */
+/* ================== */
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.menu-icon span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--secondary-color);
+    margin: 3px 0;
+    transition: 0.4s;
+}
+
+/* Hide Checkbox */
+.menu-toggle {
+    display: none;
+}
+
+/* ================== */
+/* Session Button */
+/* ================== */
+.session-button {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    font-size: clamp(13px, 2vw, 16px);
+    padding: clamp(10px, 1.5vw, 14px) clamp(12px, 2vw, 16px);
+    background-color: var(--primary-light-color);
+    color: #fafafa;
+    border-radius: 20px;
+    border: none;
+}
+
+/* Material Icons Styling */
+.material-symbols-outlined {
+    font-size: clamp(20px, 3vw, 26px);
+    color: #fafafa;
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 600,
+        'GRAD' 0,
+        'opsz' clamp(20px, 2vw, 24px);
+}
+
+/* ================== */
+/* Hero Section */
+/* ================== */
+.hero-section {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: center;
+    margin-block: clamp(2.8rem, 6vw, 4.5rem);
+    gap: clamp(15px, 4vw, 30px);
+}
+
+/* Hero Content */
+.hero-section-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+}
+
+.hero-section-title {
+    font-weight: 700;
+    font-size: clamp(4px, 7vw, 100px);
+    line-height: 1;
+    color: var(--secondary-color);
+}
+
+.hero-section-description {
+    font-size: clamp(14px, 1.6vw, 16px);
+    color: var(--accent-color);
+    width: 100%;
+}
+
+/* Hero Images */
+.hero-section-image {
+    display: flex;
+    flex-wrap: wrap;
+    gap: clamp(10px, 2vw, 20px);
+    max-width: 700px;
+}
+
+.hero-section-image img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.hero-section-image img:nth-child(2),
+.hero-section-image img:nth-child(3) {
+    width: calc(50% - 10px);
+    display: none;
+}
+
+
+/* ================== */
+/* Small Screens to Tablet */
+/* ================== */
+@media (max-width: 768px) {
+
+    /* Header */
+    .menu-icon {
+        display: flex;
+    }
+
+    .nav-container {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: clamp(180px, 45%, 250px);
+        background-color: whitesmoke;
+        flex-direction: column;
+        gap: 30px;
+        padding: 80px 20px 20px;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+        opacity: 0;
+        transform: translateX(100%);
+        visibility: hidden;
+        transition: all 0.5s ease-in-out;
+    }
+
+    /* Show Menu When Toggled */
+    .menu-toggle:checked~.nav-container {
+        display: flex;
+        opacity: 1;
+        transform: translateX(0);
+        visibility: visible;
+    }
+
+    /* Header Navigation Links */
+    .header-nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header-button {
+        position: relative;
+        width: 100%;
+
+    }
+
+    /* Button Section Animation (Line Above Button) */
+    .contact-button::before {
+        content: "";
+        position: absolute;
+        top: -15px;
+        left: 0;
+        width: 0;
+        height: 1.5px;
+        background-color: var(--primary-light-color);
+        opacity: 0;
+        transition: width 0.8s ease-in-out 0.5s, opacity 0.8s ease-in-out 0.5s;
+    }
+
+    /* Toggle Animation */
+    .menu-toggle:checked~.nav-container .contact-button::before {
+        opacity: 1;
+        width: 100%;
+    }
+
+    .menu-toggle:not(:checked)~.nav-container .contact-button::before {
+        width: 0;
+        opacity: 0;
+    }
+
+
+    /* Menu Icon Animation */
+    .menu-toggle:checked~.menu-icon span:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+
+    .menu-toggle:checked~.menu-icon span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle:checked~.menu-icon span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+
+    .active {
+        transform: translateX(5px);
+    }
+}
+
+/* ================== */
+/* Tablet to Large Screens */
+/* ================== */
+@media (min-width: 769px) {
+
+    /* Header */
+    .nav-container {
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .header-nav {
+        flex-grow: 1;
+    }
+
+    /* Hero Section */
+    .hero-section {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .hero-section-content p.hero-section-description {
+        width: 60%;
+    }
+
+    .hero-section-image img:nth-child(2),
+    .hero-section-image img:nth-child(3) {
+        display: block;
+    }
+
+    /* ================== */
+    /* Between Tablet and  Large Screens */
+    /* ================== */
+    @media (min-width: 769px) and (max-width: 1024px) {
+        .hero-section-content p.hero-section-description {
+            width: 75%;
+
+        }
+    }
+}
