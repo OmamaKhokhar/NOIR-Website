@@ -43,10 +43,10 @@
                 <nav class="header-nav">
                     <ul>
                         <li class="active"><a href="#">Home</a></li>
-                        <li><a href="#about-us">About US</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Project</a></li>
-                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#our-story">Our Story</a></li>
+                        <li><a href="#expertise">Expertise</a></li>
+                        <li><a href="#">Showcase</a></li>
+                        <li><a href="#">Gallery</a></li>
                     </ul>
                 </nav>
 
@@ -67,14 +67,14 @@
     <main>
 
         <!-- Hero Section -->
-        <section>
-            <div class="container hero-section">
+        <section id="home">
+            <div class="container hero-container">
                 <!-- Hero Section : Content -->
-                <div class="hero-section-content">
-                    <h1 class="hero-section-title">Capture Moments Create Art</h1>
-                    <p class="hero-section-description">A creative photography studio where every shot tells a story.
+                <div class="hero-content">
+                    <h1 class="hero-title">Capture Moments Create Art</h1>
+                    <p class="hero-description">A creative photography studio where every shot tells a story.
                     </p>
-                    <div class="hero-section-button">
+                    <div class="hero-button">
                         <button class="session-button">
                             <span class="session-button-text">Book Your Session</span>
                             <span class="material-symbols-outlined">
@@ -85,7 +85,7 @@
                 </div>
 
                 <!-- Hero Section : Image -->
-                <div class="hero-section-image">
+                <div class="hero-image">
                     <img src="assets/images/hero-section-image-1.jpg" alt="A Image of Camera">
                     <img src="assets/images/hero-section-image-2.avif" alt="A Image of black object is sitting hill">
                     <img src="assets/images/hero-section-image-3.webp" alt="A Photograph of two chairs">
@@ -93,38 +93,30 @@
             </div>
         </section>
 
-
         <!-- About Us Section -->
-        <section id="about-us" class=" about-us-section">
-            <div class="about-us-section-container">
-
-                <!-- About Us Section : Image -->
-                <div class="about-us-section-image">
-
-                    <div class="mask-container">
+        <section id="our-story" class="about-section">
+            <div class="about-container">
+                <!-- About Us : Image -->
+                <div class="about-image">
+                    <div class="mask-wrapper">
                         <div class="mask-box small-left"></div>
                         <div class="mask-box large"></div>
                         <div class="mask-box medium"></div>
                         <div class="mask-box small-right"></div>
                     </div>
-
-                    <img src="assets/images/about-us-section-image-2.jpg" alt="A Image of chair in studio">
-
-                    <img src="assets/images/about-us-section-image-3.jpg" alt="A Image of chair in studio">
+                    <img src="assets/images/about-us-section-image-2.jpg" alt="Studio chair">
+                    <img src="assets/images/about-us-section-image-3.jpg" alt="Studio chair">
                 </div>
 
-                <!-- About Us Section : Content -->
-                <div class="about-us-section-content">
-                    <div class="about-us-section-title">
-                        <p class="about-us-section-short-title">OUR PHILOSOPHY
-                        </p>
-                        <h1 class="about-us-section-title">The Soul Behind Our Art</h1>
+                <!-- About Us : Content -->
+                <div class="about-content">
+                    <div class="about-title">
+                        <p class="about-subtitle">OUR PHILOSOPHY</p>
+                        <h1 class="about-heading">The Soul Behind Our Art</h1>
                     </div>
-
-                    <p class="about-us-section-description">At NOIR, photography is an art of refinement where light
-                        sculpts, shadows whisper, and moments transcend time. We capture the essence of untold stories.
-                    </p>
-                    <div class="about-us-section-button">
+                    <p class="about-description">At NOIR, photography is an art of refinement where light sculpts,
+                        shadows whisper, and moments transcend time.</p>
+                    <div class="about-button">
                         <button class="session-button">
                             <span class="session-button-text">Book Your Session</span>
                             <span class="material-symbols-outlined">
@@ -133,9 +125,55 @@
                         </button>
                     </div>
                 </div>
-
             </div>
         </section>
+
+        <!-- Expertise Section -->
+        <section id="expertise">
+            <div class="expertise-container container">
+                <!-- Expertise Heading -->
+                <div class="expertise-heading">
+                    <h1 class="expertise-title">Mastery</h1>
+                </div>
+
+                <!-- Expertise Image -->
+                <div class="expertise-image">
+                    <img src="assets/images/expertise-section-image-1.jpg" alt="Studio setup">
+                    <img src="assets/images/expertise-section-image-2.jpg" alt="Behind-the-scenes photoshoot">
+                </div>
+
+                <!-- Expertise Content -->
+                <div class="expertise-content">
+                    <div class="expertise-item">
+                        <h2 class="expertise-item-title"><span>1.</span> Vision & Artistry</h2>
+                        <p class="expertise-item-description">
+                            <span class="long-text">We craft compositions where light, shadow, and soul unite, capturing
+                                the moment with emotion.</span>
+                            <span class="short-text">Light and soul entwined in every frame.</span>
+                        </p>
+                    </div>
+
+                    <div class="expertise-item">
+                        <h2 class="expertise-item-title"><span>2.</span> Poised Essence</h2>
+                        <p class="expertise-item-description">
+                            <span class="long-text">Every frame blends elegance and depth, capturing stories with a
+                                refined, cinematic touch.</span>
+                            <span class="short-text">Elegance meets depth in every frame.</span>
+                        </p>
+                    </div>
+
+                    <div class="expertise-item">
+                        <h2 class="expertise-item-title"><span>3.</span> Seamless Craft</h2>
+                        <p class="expertise-item-description">
+                            <span class="long-text">From concept to final shot, every detail is curated for an immersive
+                                visual journey.</span>
+                            <span class="short-text">Concept to final shot, seamless artistry.</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 </body>
 
