@@ -555,6 +555,57 @@ body {
     font-weight: 500;
 }
 
+/* ================== */
+/* Client Logo Section */
+/* ================== */
+.client-logos-section {
+    width: 100%;
+    overflow: hidden;
+    background: var(--secondary-color);
+    padding-block: clamp(1.5rem, 4vw, 3rem);
+    display: flex;
+    align-items: center;
+}
+
+/* Logo Container */
+.logos-container {
+    display: flex;
+    gap:  clamp(3rem, 4vw, 6rem);
+    width: max-content;
+}
+
+/* Logos Slide - Animation Applied Here */
+.logos-slide {
+    display: flex;
+    align-items: center;
+    gap:  clamp(4.5rem, 8vw, 6.5rem);
+    animation: scroll 20s linear infinite;
+    /* Speed & Smoothness */
+}
+
+/* Individual Logos */
+.logos-slide img {
+    width: clamp(100px, 18vw, 140px);
+    filter: brightness(0.5);
+    transition: filter 0.3s ease-in-out;
+}
+
+.logos-slide img:hover {
+    filter: brightness(1);
+}
+
+/* Keyframes for Scrolling Effect */
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+
 
 /* ================== */
 /* Small Screens and below*/
