@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "amstelan";
+    src: url("assets/fonts/amstelan.regular.ttf");
+}
+
 /* ================== */
 /* Root Variables     */
 /* ================== */
@@ -686,7 +691,56 @@ body {
     font-style: oblique;
 }
 
+/* ================== */
+/* Quote Section */
+/* ================== */
+.quote-section {
+    width: 100%;
+    background: var(--secondary-color);
+}
 
+.quote-container {
+    width: min(85%, 1200px);
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    padding-block: clamp(4rem, 6vw, 7rem);
+}
+
+/* Quote Content */
+.quote-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(15px, 4vw, 40px);
+    width: 100%;
+    text-align: center;
+}
+
+.quote-heading {
+    font-weight: 600;
+    font-size: clamp(21px, 9vw, 100px);
+    text-transform: uppercase;
+    color: #fafafa;
+}
+
+.quote-subheading {
+    font-weight: 100;
+    font-style: oblique;
+    font-family: "amstelan";
+    font-size: clamp(21px, 12vw, 140px);
+    color: var(--accent-color);
+    position: relative;
+    top: -0.5em;
+}
+
+.quote-description {
+    font-size: clamp(13px, 1.6vw, 16px);
+    color: var(--accent-color);
+    max-width: 55%;
+    margin-top: -7vw;
+}
 
 /* ================== */
 /* Small Screens and below*/
@@ -795,6 +849,11 @@ body {
 
     .team-item img {
         height: 220px;
+    }
+
+    /* Quote Section */
+    .quote-description {
+        max-width: 90%;
     }
 
 }
@@ -970,6 +1029,11 @@ body {
     .team-item img {
         height: 280px;
     }
+
+    /* Quote Section */
+    .quote-description {
+        max-width: 70%;
+    }
 }
 
 /* ================== */
@@ -1041,5 +1105,16 @@ body {
     /* Showcase Section */
     .showcase-content p.showcase-description:nth-of-type(1) {
         display: none !important;
+    }
+}
+
+
+/* ================== */
+/* Above Large Screens */
+/* ================== */
+@media (min-width: 1440px) {
+    /* Quote Section */
+    .quote-description {
+        margin-top: -4vw;
     }
 }
