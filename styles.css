@@ -85,7 +85,8 @@ body {
 /* ================== */
 /* Contact Button */
 /* ================== */
-.header-button .contact-button {
+.header-button .contact-button,
+.footer-button .contact-button {
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -370,7 +371,7 @@ body {
     flex-direction: column;
     justify-content: center;
     gap: 15px;
-    max-width: 45%;
+    max-width: 47%;
 }
 
 .expertise-item-title {
@@ -687,7 +688,6 @@ body {
 .team-position {
     font-size: clamp(10px, 1.6vw, 16px);
     color: var(--primary-color);
-    /* text-align: center; */
     font-style: oblique;
 }
 
@@ -742,6 +742,96 @@ body {
     margin-top: -7vw;
 }
 
+/* ================== */
+/* Footer */
+/* ================== */
+.footer {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Footer Top */
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    padding-top: clamp(4rem, 6vw, 7rem);
+    padding-bottom: 30px;
+    width: min(85%, 1200px);
+    margin: 0 auto;
+}
+
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-brand .brand-name {
+    font-size: clamp(3rem, 6vw, 4.4rem);
+}
+
+.footer-brand-detail {
+    font-size: clamp(12px, 2vw, 14px);
+    color: var(--accent-color);
+    font-weight: 300;
+    font-style: normal;
+}
+
+
+/* Navigation Links */
+.footer-nav-container {
+    display: flex;
+    gap: clamp(15px, 4vw, 40px);
+
+}
+
+.footer-nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    color: var(--accent-color);
+    font-size: clamp(14px, 2vw, 16px);
+    font-weight: 600;
+}
+
+.footer-button {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+.footer-button-heading {
+    text-transform: uppercase;
+    font-size: clamp(12px, 2vw, 20px);
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+/* Footer Bottom */
+
+.footer-bottom {
+    width: 100%;
+    background: var(--secondary-color);
+}
+
+.footer-bottom-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    color: var(--accent-color);
+}
+
+.footer-copy {
+    font-size: clamp(12px, 2vw, 14px);
+}
+
+.footer-social {
+    display: flex;
+    gap: clamp(15px, 4vw, 30px);
+}
 /* ================== */
 /* Small Screens and below*/
 /* ================== */
@@ -945,6 +1035,40 @@ body {
         transform: translateX(5px);
     }
 
+    
+    /* Footer */
+    .footer-top {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer-nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+
+    }
+
+    .footer-nav ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        column-gap: clamp(12px, 3.5vw, 30px);
+    }
+
+    .footer-nav .active {
+        transform: translateX(0px);
+    }
+
+    .footer-bottom-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 0;
+        color: var(--accent-color);
+    }
+
 }
 
 /* ================== */
@@ -1113,6 +1237,7 @@ body {
 /* Above Large Screens */
 /* ================== */
 @media (min-width: 1440px) {
+
     /* Quote Section */
     .quote-description {
         margin-top: -4vw;
