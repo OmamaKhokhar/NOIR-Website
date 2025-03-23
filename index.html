@@ -53,10 +53,12 @@
 
                 <!-- Button -->
                 <div class="header-button">
-                    <button class="contact-button">
+                    <a href="#modal" class="contact-button">
                         <span class="contact-button-text">Get In Touch</span>
-                        <span class="contact-icon"><i class="fa-solid fa-envelope fa-lg"
-                                style="color:  #fafafa;"></i></span></button>
+                        <span class="contact-icon">
+                            <i class="fa-solid fa-envelope fa-lg"></i>
+                        </span>
+                    </a>
 
                 </div>
 
@@ -65,6 +67,45 @@
     </header>
 
     <main>
+
+        <!-- Modal -->
+        <div id="modal" class="modal">
+
+            <div class="modal-container">
+
+                <div class="modal-content">
+                    <a href="#" class="close">&times;</a> <!-- Close Button -->
+
+                    <h2 class="modal-heading">NOIR Connect</h2>
+                    <p class="modal-subtitle">A moment. A story. Let’s capture it.</p>
+
+                    <form>
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required>
+
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <label for="message">Your Vision</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+
+                        <button class="submit-button" type="submit">
+                            Let’s Begin
+                            <i class="submit-icon fa-solid fa-paper-plane fa-lg"></i>
+                        </button>
+                    </form>
+
+                    <p class="modal-message">Art in light and shadow. Let’s craft yours.</p>
+                </div>
+
+                <!-- Modal Image -->
+                <div class="modal-image">
+                    <img src="assets/images/modal-image-1.jpg" alt="Noir Studio Aesthetic">
+                </div>
+            </div>
+
+        </div>
+
 
         <!-- Hero Section -->
         <section id="home">
@@ -75,12 +116,10 @@
                     <p class="hero-description">A creative photography studio where every shot tells a story.
                     </p>
                     <div class="hero-button">
-                        <button class="session-button">
+                        <a href="#modal" class="session-button">
                             <span class="session-button-text">Book Your Session</span>
-                            <span class="material-symbols-outlined">
-                                call_made
-                            </span>
-                        </button>
+                            <span class="material-symbols-outlined">call_made</span>
+                        </a>
                     </div>
                 </div>
 
@@ -118,12 +157,10 @@
                         light sculpts,
                         shadows whisper, and moments transcend time.</p>
                     <div class="about-button">
-                        <button class="session-button">
+                        <a href="#modal" class="session-button">
                             <span class="session-button-text">Book Your Session</span>
-                            <span class="material-symbols-outlined">
-                                call_made
-                            </span>
-                        </button>
+                            <span class="material-symbols-outlined">call_made</span>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -371,12 +408,10 @@
                     </p>
 
                     <div class="quote-button">
-                        <button class="session-button">
+                        <a href="#modal" class="session-button">
                             <span class="session-button-text">See The Unseen</span>
-                            <span class="material-symbols-outlined">
-                                call_made
-                            </span>
-                        </button>
+                            <span class="material-symbols-outlined">call_made</span>
+                        </a>
                     </div>
 
                 </div>
@@ -388,7 +423,7 @@
     </main>
 
     <footer>
-     
+
         <div class=" footer">
 
             <div class="footer-top">
@@ -422,10 +457,12 @@
                         <h3 class="footer-button-heading">
                             Lets Create Art!
                         </h3>
-                        <button class="contact-button">
+                        <a href="#modal" class="contact-button">
                             <span class="contact-button-text">Get In Touch</span>
-                            <span class="contact-icon"><i class="fa-solid fa-envelope fa-lg"
-                                    style="color:  #fafafa;"></i></span></button>
+                            <span class="contact-icon">
+                                <i class="fa-solid fa-envelope fa-lg"></i>
+                            </span>
+                        </a>
 
                     </div>
 
@@ -449,12 +486,13 @@
                         <a href="https://www.pinterest.com" target="_blank"><i class="fab fa-lg fa-pinterest-p"></i></a>
                         <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-lg fa-linkedin-in"></i></a>
                     </div>
-                    
+
                 </div>
             </div>
 
         </div>
     </footer>
+
 </body>
 
 </html>
